@@ -1,6 +1,5 @@
 #!/bin/bash
 clc -s
-cat Version.dat
 go mod tidy
 go fmt .
 staticcheck .

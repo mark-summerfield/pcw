@@ -4,13 +4,9 @@
 package main
 
 import (
-    "fmt"
-    _ "embed"
-    )
-
-//go:embed Version.dat
-var Version string
+	"fmt"
+)
 
 func main() {
-    fmt.Println("Hello pcw")
+	fmt.Println("Hello pcw")
 }

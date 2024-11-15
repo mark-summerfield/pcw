@@ -2,8 +2,9 @@ module github.com/mark-summerfield/pcw
 
 go 1.23
 
-// replace github.com/mark-summerfield/ureal => /home/mark/app/golib/ureal
-// require github.com/mark-summerfield/ureal v1.0.0
+replace github.com/mark-summerfield/ureal => /home/mark/app/golib/ureal
+
+require github.com/mark-summerfield/ureal v1.0.0
 
 // replace github.com/mark-summerfield/utext => /home/mark/app/golib/utext
 // require github.com/mark-summerfield/utext v1.0.0 // indirect
@@ -25,7 +26,7 @@ go 1.23
 
 replace github.com/mark-summerfield/set => /home/mark/app/golib/set
 
-require github.com/mark-summerfield/set v1.0.0 // indirect
+require github.com/mark-summerfield/set v1.0.0
 
 replace github.com/mark-summerfield/tdb => /home/mark/app/golib/tdb
 

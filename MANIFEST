@@ -3,11 +3,11 @@ pcw.go
 
 go.mod
 
-pcw.py # TODO delete
-
 st.sh
 
 # TODO find free static site web hosting
+
+# TODO Magpie GUI to manage tdb file?
 
 # Links
 # https://www.worldradiohistory.com/Personal_Computer_World.htm

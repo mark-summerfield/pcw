@@ -1,13 +1,34 @@
-pcw.tdb
+pcw.mag
 pcw.go
 
 go.mod
 
 st.sh
 
-# TODO find free static site web hosting
+# TODO outputs:
+#   www/*.html
+#   www/covers/*.png
+#   www/pcw.sqlite (all data from .mag + covers)
 
-# TODO Magpie GUI to manage tdb file?
+# TODO Magpie Go/FLTK GUI to manage .mag file to make editing easier?
+# 
+# [Add] [Edit] [Save] [Quit]
+# +-----------------------+-----------------------+
+# | Magazines list        | Article details       |
+# |                       |                       |
+# |                       |  +----------------+   |
+# |                       |  | Cover          |   |
+# +-----------------------+  |                |   |
+# | Articles list         |  |                |   |
+# |                       |  |                |   |
+# |                       |  |                |   |
+# |                       |  |                |   |
+# +-----------------------+-----------------------+
+#
+# Magazines list is master to Articles list (of selected Magazine) and
+# Articles list is master to Article details (of selected Article)
+
+# TODO find free static site web hosting
 
 # Links
 # https://www.worldradiohistory.com/Personal_Computer_World.htm

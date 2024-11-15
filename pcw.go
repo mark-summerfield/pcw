@@ -17,10 +17,11 @@ import (
 func main() {
 	log.SetFlags(0)
 	root, www := preparePaths()
-	pcw := readDatabase(filepath.Join(root, "pcw.tdb"))
+	pcw := readDatabase(filepath.Join(root, "pcw.mag"))
 	fmt.Printf("Read %s volumes and %s articles\n",
-		ureal.Commas(len(pcw.Volumes)), ureal.Commas(len(pcw.Articles)))
+		ureal.Commas(len(pcw.Magazines)), ureal.Commas(len(pcw.Articles)))
 	fmt.Println(www) // TODO delete
+	//fmt.Println(pcw) // TODO delete
 	/* TODO create
 	- index.html
 	- a page per issue with articles details + cover screenshot + pdf
@@ -66,7 +67,7 @@ type Database struct {
 	About     []About
 	Kinds     []Kind
 	Languages []Language
-	Volumes   []Volume
+	Magazines []Magazine
 	Articles  []Article
 }
 
@@ -82,24 +83,27 @@ type Language struct {
 	Name string
 }
 
-type Volume struct {
-	Vid     string
-	Volnum  string
-	Pdflink string
-	Notes   string
+type Magazine struct {
+	Vid      string
+	Volnum   string
+	Pdflink  string // web link to online PDF
+	Filename string // my local copy of the PDF
+	Have     bool   // whether I have a physical copy
+	Notes    string
 }
 
 type Article struct {
-	Vid    string
-	Title  string
-	Kid    string
-	Lid    string
-	Author string
+	Vid      string
+	Title    string
+	Kid      string
+	Lid      string
+	Author   string // comma-separated if more than one
+	Keywords string // space-separated
 }
 
 func (me *Database) Verify() error {
 	vids := set.New[string]()
-	for _, volume := range me.Volumes {
+	for _, volume := range me.Magazines {
 		vids.Add(volume.Vid)
 	}
 	kids := set.New[string]()

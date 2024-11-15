@@ -1,6 +1,6 @@
 #!/bin/bash
 clc -s
-ls -lh pcw.tdb
+ls -lh pcw.mag
 go mod tidy
 go fmt .
 staticcheck .

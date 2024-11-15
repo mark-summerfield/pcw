@@ -38,11 +38,12 @@ be comprehensive.>
 <c> <C>
 <cpp> <C++>
 ]
-[Volumes Vid str Volnum str Pdflink str Notes str
+[Magazines Vid str Volnum str Pdflink str Filename str Have bool Notes str
 %
 <1978#02> <1#1>
-<https://www.worldradiohistory.com/UK/Personal-Computer-World/70s/Personal-Computer-World-Vol.1-No.1-S-OCR.pdf> <>
+<https://www.worldradiohistory.com/UK/Personal-Computer-World/70s/Personal-Computer-World-Vol.1-No.1-S-OCR.pdf>
+</home/mark/hoc/magazines/pcw/pcw-1978-02.pdf> y <>
 ]
-[Articles Vid str Title str Kid str Lid str Author str
+[Articles Vid str Title str Kid str Lid str Author str Keywords str
 %
 ]

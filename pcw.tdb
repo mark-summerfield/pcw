@@ -1,4 +1,4 @@
-[About about str
+[About About str
 %
 <Copyright © Mark Summerfield 2024. All Rights Reserved.
 The purpose of this database is to provide indexes into every 20th
@@ -6,7 +6,7 @@ Century issue of Personal Computer World magazine. The Adverts index
 covers only “notable” advertisements. All other indexes are intended to
 be comprehensive.>
 ]
-[Kinds kid str name str
+[Kinds Kid str Name str
 %
 <F> <Feature>
 <B> <Book Review>
@@ -17,7 +17,7 @@ be comprehensive.>
 <C> <Code Listing>
 <A> <Advert>
 ]
-[Languages kid str name str
+[Languages Kid str Name str
 %
 <80> <Assember/Z80>
 <86> <Assember/8086>
@@ -38,11 +38,11 @@ be comprehensive.>
 <c> <C>
 <cpp> <C++>
 ]
-[Volumes vid str volnum str pdflink str notes str
+[Volumes Vid str Volnum str Pdflink str Notes str
 %
 <1978#02> <1#1>
-<https://www.worldradiohistory.com/UK/Personal-Computer-World/70s/Personal-Computer-World-Vol.1-No.1-S-OCR.pdf>
+<https://www.worldradiohistory.com/UK/Personal-Computer-World/70s/Personal-Computer-World-Vol.1-No.1-S-OCR.pdf> <>
 ]
-[Articles vid str title str kid str lid str author str
+[Articles Vid str Title str Kid str Lid str Author str
 %
 ]

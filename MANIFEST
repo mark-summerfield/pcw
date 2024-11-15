@@ -1,5 +1,9 @@
 pcw.tdb
-pcw.py
+pcw.go
+
+go.mod
+
+pcw.py # TODO delete
 
 st.sh
 

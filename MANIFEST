@@ -1,19 +1,9 @@
+pcw.tdb
 pcw.py
-pcw-create.sql
 
 st.sh
 
 # TODO find free static site web hosting
-
-# TODO
-# pcw.tdb
-# Issues (year, month, issuenum, title, linktopdf, coverimagefilename, notes)
-# Articles (year, month, title, keywords)
-#
-# notes is "fun facts" about the issue, e.g., RAM prices etc.
-#
-# pcw.go should generate index.html with year/month links, plus an index
-# of articles, computers, software
 
 # Links
 # https://www.worldradiohistory.com/Personal_Computer_World.htm

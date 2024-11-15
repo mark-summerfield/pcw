@@ -9,14 +9,17 @@ import sys
 sys.path.append(os.path.expanduser('~/app/py'))
 import tdb
 
-ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'www')
+ROOT = os.path.abspath(os.path.dirname(__file__))
+WWW = os.path.join(ROOT, 'www')
 
 
 def main():
     with contextlib.suppress(FileNotFoundError):
-        shutil.rmtree(ROOT)
-    os.mkdir(ROOT)
-    shutil.copytree('covers', os.path.join(ROOT, 'covers'))
+        shutil.rmtree(WWW)
+    os.mkdir(WWW)
+    shutil.copytree('covers', os.path.join(WWW, 'covers'))
+    pcw = tdb.load(os.path.join(ROOT, 'pcw.tdb'))
+    pcw.dump(sys.stdout)
 
     # TODO create
     # - index.html
@@ -27,3 +30,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

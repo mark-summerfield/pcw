@@ -31,7 +31,7 @@ func preparePaths() (string, string) {
 	root := getRoot()
 	www := filepath.Join(root, "www")
 	_ = os.RemoveAll(www)
-	os.Mkdir("www", 0750)
+	CheckErr(os.Mkdir("www", 0750))
 	CheckErr(copy.Copy(filepath.Join(root, "covers"),
 		filepath.Join(www, "covers")))
 	return root, www

@@ -1,5 +1,6 @@
 #!/bin/bash
 clc -s
+wc pcw.tdb
 echo no py app to check
 # unrecognized.py -q
 # python3 -m flake8 --ignore=W504,W503,E261,E303 .

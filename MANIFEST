@@ -1,4 +1,4 @@
-pcw.tdb
+pcw-create.sql
 
 st.sh
 
@@ -13,5 +13,12 @@ st.sh
 #
 # pcw.go should generate index.html with year/month links, plus an index
 # of articles, computers, software
+
+# Links
+# https://www.worldradiohistory.com/Personal_Computer_World.htm
+# http://www.primrosebank.net/pcw/pcw_ov.htm
+# https://stardot.org.uk/forums/viewtopic.php?t=19470&start=60
+# https://archive.org/details/personalcomputerworld
+# https://www.computinghistory.org.uk/sec/573/Personal-Computer-World/
 
 # vim: syn=yaml

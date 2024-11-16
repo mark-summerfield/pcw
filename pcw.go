@@ -9,7 +9,6 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/mark-summerfield/set"
 	"github.com/mark-summerfield/tdb"
 	"github.com/mark-summerfield/ureal"
 	"github.com/otiai10/copy"
@@ -19,7 +18,7 @@ func main() {
 	log.SetFlags(0)
 	root, www := prepare()
 	mb := readMetabase(filepath.Join(root, "pcw.mag"))
-	fmt.Printf("Read %s volumes and %s articles\n",
+	fmt.Printf("Read %s magazines and %s articles\n",
 		ureal.Commas(len(mb.Magazines)), ureal.Commas(len(mb.Articles)))
 	fmt.Println(www) // TODO delete
 	//fmt.Println(mb)  // TODO delete
@@ -71,11 +70,11 @@ func CheckErr(err error) {
 
 type Metabase struct {
 	Database
-	vids set.Set[string]
-	aids set.Set[string]
-	kids set.Set[string]
-	lids set.Set[string]
-	cids set.Set[string]
+	vids map[string]string
+	aids map[string]string
+	kids map[string]string
+	lids map[string]string
+	cids map[string]string
 }
 
 type Database struct {
@@ -145,35 +144,35 @@ type Article struct {
 }
 
 func (me *Metabase) Initialize() {
-	me.vids = set.New[string]()
-	for _, volume := range me.Magazines {
-		me.vids.Add(volume.Mid)
+	me.vids = map[string]string{}
+	for _, magazine := range me.Magazines {
+		me.vids[magazine.Mid] = magazine.Volnum
 	}
-	me.kids = set.New[string]()
+	me.kids = map[string]string{}
 	for _, kind := range me.Kinds {
-		me.kids.Add(kind.Kid)
+		me.kids[kind.Kid] = kind.Name
 	}
-	me.aids = set.New[string]()
+	me.aids = map[string]string{}
 	for _, author := range me.Authors {
-		me.aids.Add(author.Aid)
+		me.aids[author.Aid] = author.Name
 	}
-	me.lids = set.New[string]()
+	me.lids = map[string]string{}
 	for _, language := range me.Languages {
-		me.lids.Add(language.Lid)
+		me.lids[language.Lid] = language.Name
 	}
-	me.cids = set.New[string]()
+	me.cids = map[string]string{}
 	for _, computer := range me.Computers {
-		me.cids.Add(computer.Cid)
+		me.cids[computer.Cid] = computer.Model
 	}
 }
 
 func (me *Metabase) Verify() {
 	for _, article := range me.Articles {
-		if !me.vids.Contains(article.Mid) {
-			OnError(fmt.Errorf("invalid volume ID (vid) %#v %#v",
+		if _, ok := me.vids[article.Mid]; !ok {
+			OnError(fmt.Errorf("invalid magazine ID (mid) %#v %#v",
 				article.Mid, article.Title))
 		}
-		if !me.kids.Contains(article.Kid) {
+		if _, ok := me.kids[article.Kid]; !ok {
 			OnError(fmt.Errorf("invalid kind ID (kid) %#v %#v", article.Kid,
 				article.Title))
 		}
@@ -185,10 +184,10 @@ func (me *Metabase) Verify() {
 	}
 }
 
-func verifyIds(ids string, idset set.Set[string],
+func verifyIds(ids string, idset map[string]string,
 	what, title string) error {
 	for _, id := range GetIds(ids) {
-		if !idset.Contains(id) {
+		if _, ok := idset[id]; !ok {
 			return fmt.Errorf("invalid %s ID %#v %#v", what, id, title)
 		}
 	}

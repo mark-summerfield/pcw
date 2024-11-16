@@ -12,7 +12,7 @@ st.sh
 
 # TODO Magpie Go/FLTK GUI to manage .mag file to make editing easier?
 # 
-# [Add] [Edit] [Save] [Quit]
+# [New] [Load] [Save] [Export]  [Add] [Edit] [Quit]
 # +-----------------------+-----------------------+
 # | Magazines list        | Article details       |
 # |                       |                       |
@@ -23,10 +23,14 @@ st.sh
 # |                       |  |                |   |
 # |                       |  |                |   |
 # |                       |  |                |   |
+# +-----------------------+--+----------------+---|
+# | Computers list        |  | Computer details   |
 # +-----------------------+-----------------------+
 #
-# Magazines list is master to Articles list (of selected Magazine) and
-# Articles list is master to Article details (of selected Article)
+# Magazines list is parent to Articles list (of selected Magazine) and is
+# parent to Computers list (of selected Magazine);
+# Articles list is parent to Article details (of selected Article)
+# Computers list is parent to Computer details (of selected Article)
 
 # TODO find free static site web hosting
 

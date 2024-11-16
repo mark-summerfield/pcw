@@ -4,8 +4,10 @@
 The purpose of this database is to provide indexes into every 20th
 Century issue of Personal Computer World magazine. The Adverts index
 covers only “notable” advertisements. All other indexes are intended to
-be comprehensive.>
+be comprehensive.
+NULLs are not used; instead 0 or empty string for unknown.>
 ]
+
 [Kinds Kid str Name str
 %
 <F> <Feature>
@@ -17,6 +19,7 @@ be comprehensive.>
 <C> <Code Listing>
 <A> <Advert>
 ]
+
 [Languages Kid str Name str
 %
 <80> <Assember/Z80>
@@ -38,12 +41,23 @@ be comprehensive.>
 <c> <C>
 <cpp> <C++>
 ]
-[Magazines Vid str Volnum str Pdflink str Filename str Have bool Notes str
+
+[Authors Aid str Name str
+%
+]
+
+[Computers Cid str Make str Model str RamKb real RomKb real Lid str
+ PixW int PixH int CharW int CharH int Colors int FloppyNum int
+ FloppyKb real DiskKb real Cpu str MHz real PriceGbp real
+%
+]
+
+[Magazines Mid str Volnum str Pdflink str Filename str Have bool Notes str
 %
 <1978#02> <1#1>
 <https://www.worldradiohistory.com/UK/Personal-Computer-World/70s/Personal-Computer-World-Vol.1-No.1-S-OCR.pdf>
 </home/mark/hoc/magazines/pcw/pcw-1978-02.pdf> y <>
 ]
-[Articles Vid str Title str Kid str Lid str Author str Keywords str
+[Articles Mid str Title str Aid str Kid str Lid str Cid str Keywords str
 %
 ]

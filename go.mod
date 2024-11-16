@@ -20,7 +20,7 @@ replace github.com/mark-summerfield/clip => /home/mark/app/golib/clip
 
 replace github.com/mark-summerfield/set => /home/mark/app/golib/set
 
-require github.com/mark-summerfield/set v1.0.0
+require github.com/mark-summerfield/set v1.0.0 // indirect
 
 replace github.com/mark-summerfield/tdb => /home/mark/app/golib/tdb
 

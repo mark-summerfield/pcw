@@ -12,20 +12,20 @@ st.sh
 
 # TODO Magpie Go/FLTK GUI to manage .mag file to make editing easier?
 # 
-# [New] [Load] [Save] [Export]  [Add] [Edit] [Quit]
-# +-----------------------+-----------------------+
-# | Magazines list        | Article details       |
-# |                       |                       |
-# |                       |  +----------------+   |
-# |                       |  | Cover          |   |
-# +-----------------------+  |                |   |
-# | Articles list         |  |                |   |
-# |                       |  |                |   |
-# |                       |  |                |   |
-# |                       |  |                |   |
-# +-----------------------+--+----------------+---|
-# | Computers list        |  | Computer details   |
-# +-----------------------+-----------------------+
+# [New] [Load] [Save] [Export] | [Add] [Edit] [Remove] [Quit]
+# +---------------------------------+-----------------------+
+# | Magazines list                  | Article details…      |
+# |                                 |  author(s)            |
+# |                                 |  +----------------+   |
+# |                                 |  | Cover          |   |
+# +---------------------------------+  |                |   |
+# | Articles list                   |  |                |   |
+# |                                 |  |                |   |
+# |                                 |  |                |   |
+# |                                 |  |                |   |
+# +---------------------------------+--+----------------+---|
+# | Computers list                  |  | Computer details   |
+# +---------------------------------+-----------------------+
 #
 # Magazines list is parent to Articles list (of selected Magazine) and is
 # parent to Computers list (of selected Magazine);

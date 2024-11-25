@@ -89,15 +89,36 @@ a:visited[href^="http://"] {
     text-shadow: 1px 1px lightgray;
 }
 
-hr { width: 95%; }
+hr { width: 67%; }
  
 table {
-    border: 0.5em;
-    border-color: navy;
-    margin: 0.2em;
-    padding: 0.2em;
+    margin: 0.25em;
+    padding: 0.25em;
 }
 
+table, th, td {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.25em;
+}
+
+tr:nth-child(odd) { background-color: #F2F2F2; }
+
+th {
+    font-style: italic;
+    color: darkgreen;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.home_image { float: right; max-width: 50%; }
 
 code {
     font-size: 1em;

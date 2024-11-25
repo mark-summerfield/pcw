@@ -1,44 +1,8 @@
-pcw.mag
-pcw.go
+index.html
+missing-issues.html
 
-go.mod
+style.css
+
+Year.js
 
 st.sh
-
-# TODO outputs:
-#   www/*.html
-#   www/covers/*.png
-#   www/pcw.sqlite (all data from .mag + covers)
-
-# TODO Magpie Go/FLTK GUI to manage .mag file to make editing easier?
-# 
-# [New] [Load] [Save] [Export] | [Add] [Edit] [Remove] [Quit]
-# +---------------------------------+-----------------------+
-# | Magazines list                  | Article details…      |
-# |                                 |  author(s)            |
-# |                                 |  +----------------+   |
-# |                                 |  | Cover          |   |
-# +---------------------------------+  |                |   |
-# | Articles list                   |  |                |   |
-# |                                 |  |                |   |
-# |                                 |  |                |   |
-# |                                 |  |                |   |
-# +---------------------------------+--+----------------+---|
-# | Computers list                  |  | Computer details   |
-# +---------------------------------+-----------------------+
-#
-# Magazines list is parent to Articles list (of selected Magazine) and is
-# parent to Computers list (of selected Magazine);
-# Articles list is parent to Article details (of selected Article)
-# Computers list is parent to Computer details (of selected Article)
-
-# TODO find free static site web hosting
-
-# Links
-# https://www.worldradiohistory.com/Personal_Computer_World.htm
-# http://www.primrosebank.net/pcw/pcw_ov.htm
-# https://stardot.org.uk/forums/viewtopic.php?t=19470&start=60
-# https://archive.org/details/personalcomputerworld
-# https://www.computinghistory.org.uk/sec/573/Personal-Computer-World/
-
-# vim: syn=yaml

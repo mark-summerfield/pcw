@@ -1,0 +1,157 @@
+/* Reset */
+html, body, h1, h2, h3, h4, h5, h6, p, pre, code, address, variable, form, fieldset, blockquote {
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+q:before, q:after { content:''; }
+
+body {
+    background-color: white;
+    font: 100% helvetica, sans-serif, tahoma;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+h1 {
+    color: #101089;
+    font-size: 1.4em; 
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    text-align: left;
+}
+
+h2 {
+    color: #101089;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    text-align: left;
+}
+
+h3 {
+    color: #101089;
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    text-align: left;
+}
+
+h4 {
+    color: #101089;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    text-align: left;
+}
+
+p {
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    text-align: left;
+}
+
+a:link {
+    color: #007700;
+}
+
+a:link[href^="https://"] {
+    color: #007700;
+    text-shadow: 1px 1px lightgray;
+}
+
+a:link[href^="http://"] {
+    color: #007700;
+    text-shadow: 1px 1px lightgray;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+a:visited[href^="https://"] {
+    color: #551A8B;
+    text-shadow: 1px 1px lightgray;
+}
+
+a:visited[href^="http://"] {
+    color: #551A8B;
+    text-shadow: 1px 1px lightgray;
+}
+
+hr { width: 95%; }
+ 
+table {
+    border: 0.5em;
+    border-color: navy;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+
+code {
+    font-size: 1em;
+    font-family: "commitmono" "dejavu sans mono", monospace;
+}
+
+pre {
+    font-size: 1em;
+    font-family: "commitmono" "dejavu sans mono", monospace;
+}
+
+tt {
+    font-size: 1em;
+    font-family: "commitmono" "dejavu sans mono", monospace;
+}
+
+
+ul {
+    list-style-type: disc;
+    margin: 0.25em;
+    padding-left: 1.5em;
+}
+
+.copyright {
+    display: block;
+    font-size: 0.9em !important;
+    border: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.captiondiv {
+    padding: 0;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    margin-bottom: 0px;
+}
+
+.title {
+    color: #101089;
+    background-color:#F5F5A4;
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.25em;
+}
+
+.subtitle {
+    color: #101089;
+    background-color:#FAFAD2;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.25em;
+}

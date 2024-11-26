@@ -89,7 +89,7 @@ a:visited[href^="http://"] {
     text-shadow: 1px 1px lightgray;
 }
 
-hr { width: 67%; }
+hr { width: 50%; }
  
 table {
     margin: 0.25em;

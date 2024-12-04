@@ -256,6 +256,7 @@ function UpdateCover(elementId) {
 	    "pcw-1999-04",
 	    "pcw-1999-05",
 	    "pcw-1999-06",
+	    "pcw-1999-07",
 	    "pcw-1999-08",
 	    "pcw-1999-09",
 	    "pcw-1999-10",

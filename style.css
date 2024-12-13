@@ -89,7 +89,10 @@ a:visited[href^="http://"] {
     text-shadow: 1px 1px lightgray;
 }
 
-hr { width: 50%; }
+hr {
+    border: 1px double lightgray;
+    width: 50%;
+}
  
 table {
     margin: 0.25em;
@@ -143,6 +146,7 @@ ul {
 }
 
 .copyright {
+    color: grey;
     display: block;
     font-size: 0.9em !important;
     border: 5px;

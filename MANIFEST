@@ -1,3 +1,7 @@
+# NOTE cd ~/app/mic & hand-edit the hand-editable *.sql files &
+# run ./mic.py to generate HTML;
+# then at the end return here, cd ~/app/www/pcw & gip
+
 index.html
 missing-issues.html
 
@@ -6,3 +10,5 @@ style.css
 Year.js
 
 st.sh
+
+# vim: syn=yaml

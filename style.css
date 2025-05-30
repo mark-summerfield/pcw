@@ -161,6 +161,8 @@ ul {
     margin-bottom: 0px;
 }
 
+.shout { color: red; font-size: 1.15em; }
+
 .title {
     color: #101089;
     background-color:#F5F5A4;
